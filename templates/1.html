@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+<title>Result</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+  align: centre;
+}
+</style>
+</head>
+
+
+<body style="background-color: #e1e1fc">
+
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a href="#" class="navbar-brand">COVID-19 CT Screen</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a href="https://covid19-ctscan.herokuapp.com/upload-image" class="nav-item nav-link active">Home</a>
+            <a href="#" class="nav-item nav-link">About</a>
+            <a href="#" class="nav-item nav-link">Products</a>
+        </div>
+        <form class="form-inline ml-auto">
+            <input type="text" class="form-control mr-sm-2" placeholder="Search">
+            <button type="submit" class="btn btn-outline-light">Search</button>
+        </form>
+    </div>
+</nav>
+
+
+
+
+<div class="jumbotron jumbotron-fluid bg-light">
+  <div class="container">
+    <h1 class="display-4">NON COVID</h1>
+    <p class="lead">This CT Scan has been classified as Non-Covid by our model. Please cross-verify the same with a specialist. Our model predicts with an accuracy of about 95%. </p>
+  </div>
+</div>
+
+
+<div class="card mb-3 mt-3 offset-1 col-sm-9">
+  <div class="card-header bg-primary">
+    <h5 style="color: white;"> STAY HOME. SAVE LIVES.</h5>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+
+<ul class="list-group">
+
+  <li class="list-group-item"><b>STAY</b> Home</li>
+  <li class="list-group-item"><b>KEEP</b> a safe distance</li>
+  <li class="list-group-item"><b>WASH</b> hands often</li>
+  <li class="list-group-item"><b>COVER</b> your cough</li>
+  <li class="list-group-item"><b>SICK?</b> Call the helpline</li>
+</ul>
+      <footer class="blockquote-footer"> Precautions by WHO</footer>
+    </blockquote>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a href="#" class="navbar-brand">Developed by : </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a href="http://www.cse.iitd.ac.in/~cs1180389/" class="nav-item nav-link active">Shrey Bansal</a>
+            <a href="https://github.com/MukulSingh105" class="nav-item nav-link active">Mukul Singh</a>
+        </div>
+    </div>
+</nav>
+
+
+
+</body>
+</html>
