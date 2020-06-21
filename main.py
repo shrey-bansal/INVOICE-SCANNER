@@ -1,6 +1,7 @@
 from veryfi import Client
 import argparse
 from json2html import *
+import json
 # parse = argparse.ArgumentParser()
 # parse.add_argument('--filename', type=str, default='test')
 # args = parse.parse_args()
@@ -17,8 +18,13 @@ def get_html(filename):
 
 	veryfi_client = Client(client_id, client_secret, username, api_key)
 	response = veryfi_client.process_document(file_path)
-	input = response
-	return (json2html.convert(json = input))
+	input1 = response
+	del response["img_file_name"]
+	del input1["img_thumbnail_url"]
+	del input1["img_url"]
+	del input1["abn_number"]
+
+	return (json2html.convert(json = input1))
 
 
 # print(get_html("4.jpg"))
