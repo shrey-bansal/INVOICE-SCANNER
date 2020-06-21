@@ -1,5 +1,6 @@
-from flask import Flask
+from flask import Flask, Markup
 from flask import render_template, request, redirect, flash, url_for
+from main import get_html
 import os
 
 
@@ -28,10 +29,8 @@ def upload_image():
             if(answer==-4):
                 return render_template("0.html")
             else:
-                cmd = "python3 main.py --filename="
-                cmd += image.filename
-                os.system(cmd)
-                return render_template("1.html")
+                tbl = get_html(image.filename)
+                return render_template("table.html",table = Markup(tbl))
     return render_template("upload.html")
 
 
