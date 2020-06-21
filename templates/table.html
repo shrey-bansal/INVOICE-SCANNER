@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>COVID-19 CT SCAN Diagnosis</title>
+  <title>Result</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -11,8 +11,18 @@
 </head>
 <body style="background-color: #e1e1fc">
 
+  {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-    <a href="#" class="navbar-brand">COVID-19 CT Screen</a>
+    <a href="#" class="navbar-brand">Smart Invoices</a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,58 +42,43 @@
 
 <div class="jumbotron jumbotron-fluid bg-light">
   <div class="container">
-    <h1 class="display-4">COVID-19 CT Screen</h1>
-    <p class="lead">An AI based model to predict if a CT Scan is COVID-19 positive or not. The model is trained over
-      1000s of real patient's images</p>
+    <h1 class="display-4">SMART Invoice Detector</h1>
+    <p class="lead">An AI based model to read invoices from variable sources and identifies key data points like
+      vendor name, unit of currency, tax amount, PO or contract reference number from the document.</p>
   </div>
 </div>
 
 <div class="container">
-  <div class ="row">
-    <div class="col-9">
-      {{ table }}
+  <div class="row">
+    <div class="card text-white bg-primary col-12">
+      <div class="card-header"><h5>Details Identified</h5></div>
+      <div class="card-body">
+        <p class="card-title">The summary of the Invoice processed is shown in the Table Below. The fields that
+        could not be identified are left blank.</p>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="card text-white bg-primary mt-4 mb-3 ml-5" style="max-width: 18rem;">
-      <div class="card-header"><h5>Train Data</h5></div>
+
+  <div class ="row">
+    <div class="card" style="max-width: 80rem;">
+      <div class="card-header"><h5>Results</h5></div>
       <div class="card-body">
-        <p class="card-title">675 Images as of Yesterday 11:59 PM</p>
+        {{ table }}
       </div>
     </div>
-    <div class="card text-white bg-primary mt-4 mb-3 ml-5" style="max-width: 18rem;">
-      <div class="card-header"><h5>Visitors</h5></div>
-      <div class="card-body">
-        <p class="card-title">103 people have visited our website till now</p>
-      </div>
-    </div>
-    <div class="card text-white bg-primary mt-4 mb-3 ml-5" style="max-width: 18rem;">
-      <div class="card-header"><h5>Scans done today</h5></div>
-      <div class="card-body">
-        <p class="card-title">72 CT Scan Predictions were made today.</p>
-      </div>
-    </div>
+  </div>
 </div>
 
 <div class="card mb-3 mt-3 offset-1 col-sm-9">
   <div class="card-header bg-primary">
-    <h5 style="color: white;"> Quotes for times of distress </h5>
+    <h5 style="color: white;"> Invoice Detection Problem </h5>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
-      <p>All our dreams can come true if we have the courage to pursue them.</p>
-      <footer class="blockquote-footer">Walt Disney</footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card mb-4 mt-2 offset-1 col-sm-9">
-  <div class="card-header bg-primary">
-    <h5 style="color: white;"> Quotes for trying times </h5>
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p>Whenever you find yourself on the side of the majority, it is time to pause and reflect.</p>
-      <footer class="blockquote-footer">Mark Twain</footer>
+      <p>In the accounting process, vendors provide system generated
+invoices/handwritten invoices for payments of contracts. Refer to the variations in sample
+invoices and it gives a glimpse of the complexity in processing huge volumes of such invoices. </p>
+      <footer class="blockquote-footer">AB InBev</footer>
     </blockquote>
   </div>
 </div>

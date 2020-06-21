@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>COVID-19 CT SCAN Diagnosis</title>
+  <title>SMART Invoices</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
       {% endwith %}
 
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-    <a href="#" class="navbar-brand">COVID-19 CT Screen</a>
+    <a href="#" class="navbar-brand">Smart Invoices</a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -42,19 +42,19 @@
 
 <div class="jumbotron jumbotron-fluid bg-light">
   <div class="container">
-    <h1 class="display-4">COVID-19 CT Screen</h1>
-    <p class="lead">An AI based model to predict if a CT Scan is COVID-19 positive or not. The model is trained over
-      1000s of real patient's images</p>
+    <h1 class="display-4">SMART Invoice Detector</h1>
+    <p class="lead">An AI based model to read invoices from variable sources and identifies key data points like
+      vendor name, unit of currency, tax amount, PO or contract reference number from the document.</p>
   </div>
 </div>
 
 <div class = "card ml-5 mr-5">
   <div class = card-body>
 <div class="container mt-3">
-  <h2>Test Now</h2>
-  <p>Upload an image of Chest CT Scan and the model will tell you if the patient is diagnosed woth COVID-19 or not.</p>
+  <h2>Process Invoice</h2>
+  <p>Upload an image or PDF of any invoice and the system will return the key data points identified in it.</p>
   <form action="/upload-image" method="POST" enctype="multipart/form-data">
-    <p>Upload the CT Scan Image:</p>
+    <p>Upload the Invoice (Image or PDF):</p>
     <div class="custom-file mb-3">
       <input type="file" class="custom-file-input" id="image" name="image">
       <label class="custom-file-label" for="customFile">Choose file</label>
@@ -69,8 +69,8 @@
 </div>
 
 
-<div class="card text-white bg-primary mt-4 mb-3 ml-5" style="max-width: 45rem;">
-  <div class="card-header"><h5>Download samples</h5></div>
+<div class="card text-white bg-primary mt-4 mb-3 ml-5" style="max-width: 70rem;">
+  <div class="card-header"><h5>Download Sample Invoices</h5></div>
   <div class="card-body">
     <p>Click on the image to download it:<p>
     <a href="static/1.jpg" download="1.jpg">
@@ -88,21 +88,21 @@
     <a href="static/5.jpg" download="5.jpg">
       <img src="static/5.jpg" alt="W3Schools" width="150" height="150">
     </a>
-    <a href="static/6.pdf" download="6.pdf">
-      <img src="static/6.pdf" alt="W3Schools" width="150" height="150">
-    </a>
-    <a href="static/7.pdf" download="7.pdf">
-      <img src="static/7.pdf" alt="W3Schools" width="150" height="150">
-    </a>
     <a href="static/8.jpg" download="8.jpg">
+      <img src="static/9.jpg" alt="W3Schools" width="150" height="150">
+    </a>
+    <a href="static/9.jpg" download="9.jpg">
+      <img src="static/8.jpg" alt="W3Schools" width="150" height="150">
+    </a>
+    <!-- <a href="static/8.jpg" download="8.jpg">
       <img src="static/8.jpg" alt="W3Schools" width="150" height="150">
     </a>
     <a href="static/9.jpg" download="9.jpg">
       <img src="static/9.jpg" alt="W3Schools" width="150" height="150">
-    </a>
-    <a href="static/10.pdf" download="10.pdf">
+    </a> -->
+    <!-- <a href="static/10.pdf" download="10.pdf">
       <img src="static/10.pdf" alt="W3Schools" width="150" height="150">
-    </a>
+    </a> -->
 
   </div>
 </div>
@@ -113,7 +113,7 @@
     <div class="card text-white bg-primary mt-4 mb-3 ml-5" style="max-width: 18rem;">
       <div class="card-header"><h5>Train Data</h5></div>
       <div class="card-body">
-        <p class="card-title">675 Images as of Yesterday 11:59 PM</p>
+        <p class="card-title">10,000+ Images used to train the identification model</p>
       </div>
     </div>
     <div class="card text-white bg-primary mt-4 mb-3 ml-5" style="max-width: 18rem;">
@@ -123,9 +123,9 @@
       </div>
     </div>
     <div class="card text-white bg-primary mt-4 mb-3 ml-5" style="max-width: 18rem;">
-      <div class="card-header"><h5>Scans done today</h5></div>
+      <div class="card-header"><h5>Invoices Recieved Today</h5></div>
       <div class="card-body">
-        <p class="card-title">72 CT Scan Predictions were made today.</p>
+        <p class="card-title">72 Invoices were processed today.</p>
       </div>
     </div>
 </div>
