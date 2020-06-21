@@ -23,6 +23,12 @@ def get_html(filename):
 	del input1["img_thumbnail_url"]
 	del input1["img_url"]
 	del input1["abn_number"]
+	del input1["vendor_account_number"]
+	del input1["vendor_bank_name"]
+	del input1["vendor_bank_number"]
+	del input1["vendor_iban"]
+	del input1["ocr_text"]
+	del input1["vendor"]["vendor_logo"]
 
 	return (json2html.convert(json = input1))
 
