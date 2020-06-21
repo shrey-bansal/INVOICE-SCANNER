@@ -1,6 +1,8 @@
+import sys, os
+sys.path.append(os.path.abspath(os.path.join('./backend/ReceiptGenerator')))
 from flask import Flask, Markup
 from flask import render_template, request, redirect, flash, url_for
-from main import get_html
+from crnn_processor import get_html
 import os
 
 
