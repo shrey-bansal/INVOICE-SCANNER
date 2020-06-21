@@ -1,4 +1,11 @@
 flask
-gunicorn==19.9.0
-veryfi
-json2html
+gunicorn
+opencv-python
+augmentor
+pillow
+tensorflow_gpu
+numpy
+opencv_python
+matplotlib
+easydict
+tensorflow>=1.12.1
