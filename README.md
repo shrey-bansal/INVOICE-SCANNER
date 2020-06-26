@@ -1,6 +1,6 @@
 # INVOICE SCANNER
 
-<h2> SMART Invoice Detector </h3>
+<h2> SMART AI based Invoice Detector </h3>
 
 <h3>Command to run on Terminal : </h3>
 
